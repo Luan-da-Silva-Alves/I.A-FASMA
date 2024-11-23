@@ -15,8 +15,8 @@ public class DialogueSystem : MonoBehaviour
 
 
     // Listas de labels para os botões
-    public string[] positiveLabels; // Labels para a resposta positiva ("Sim, me conte mais!")
-    public string[] negativeLabels; // Labels para a resposta negativa ("Não, prefiro ir embora.")
+    public string[] positiveLabels; // Labels para a resposta positiva 
+    public string[] negativeLabels; // Labels para a resposta negativa 
 
     void Start()
     {
@@ -24,52 +24,81 @@ public class DialogueSystem : MonoBehaviour
         {
             "Ola, permita me apresentar me chamo Fasmo o fantasma já estou aqui nesta mansão a tanto tempo que ja perdi a noção do tempo ", // Linha 0 manda pro 2
             "Bem infelizmente fui traido por quem eu mais confiava e acabei preso aqui.", // Linha 1 - manda pro 2 
-            "Sim!, porém para isso será necessario que eu conte uma história", // Linha 2
+            "Bem infelizmente fui traido por quem eu mais confiava e acabei preso aqui.", // Linha 2
 
-            "É claro que não! a história é importante, pois você tera que responder algumas perguntas que teram haver com ela.", // Linha 3
-            "Olha não sou eu quem fez as regras, eu apenas as sigo!", // Linha 4
-            "Dizem que ele virá de terras distantes, mas ninguém sabe exatamente quem é.", // Linha 5
-            "Talvez você seja o escolhido! Mas, claro, isso é apenas uma história.", // Linha 6
+            "Bem, para você me libertar, antes disso é necessario que eu te conte uma história", // Linha 3
+            "É claro que não! a história é importante, pois você tera que responder algumas perguntas que teram haver com ela.", // Linha 4
+            "Olha não sou eu que faz as regras eu apenas as sigo.", // Linha 5
+            "Á muito tempo, no alto de uma colina cercada por neblina constante, existia uma mansão antiga, habitada apenas por um espírito conhecido como Fasmo. Ele era um fantasma solitário, vagando pelos corredores empoeirados e ouvindo os ecos de uma vida que já não existia.", // Linha 6
 
 
-            "Mas, se preferir, podemos mudar de assunto.", // Linha 7
-            "Quem sabe falar sobre os dragões? Eles são criaturas fascinantes.", // Linha 8
-            "Os dragões são muito mais inteligentes do que parecem. Alguns dizem que eles falam!", // Linha 9
-            "Mas também há quem tenha medo deles, claro.", // Linha 10
-            "Agora, se preferir, podemos falar sobre os misteriosos portais do Reino.", // Linha 11
-            "Esses portais levam a diferentes dimensões e são muito perigosos para aventureiros inexperientes.", // Linha 12
-            "Se você tiver coragem, posso te contar mais sobre os portais...", // Linha 13
+            "Durante o dia, a mansão permanecia em silêncio absoluto, mas à noite, Fasmo preenchia os cômodos com sons de passos e sussurros. Ele tinha um segredo: em vida, havia sido um músico talentoso, e no salão principal da mansão repousava um velho piano de cauda, onde Fasmo tocava melodias tristes para a lua cheia.", // Linha 7
+            "Certo dia, um grupo de jovens corajosos decidiu explorar a mansão, em busca de aventuras e lendas. Ao entrarem, ouviram uma música melancólica ecoando pelos corredores. Intrigados, seguiram o som até o salão principal, onde encontraram Fasmo ao piano..", // Linha 8
+            "Para sua surpresa, ele não era um espírito vingativo, mas sim um fantasma amigável, que ansiava por companhia e por alguém que ouvisse suas composições.", // Linha 9
+            "A partir daquela noite, a mansão deixou de ser um lugar assustador e tornou-se um refúgio para os jovens, que passaram a se reunir ali para ouvir Fasmo tocar e aprender sobre sua vida misteriosa.\r\n\r\n", // Linha 10
+            "Agora,as perguntas.", // Linha 11
+            "Qual o segredo de Fasmo?.", // Linha 12
+            "Certa resposta", // Linha 13
 
-            "Ou, talvez, você prefira ir embora e deixar essa conversa para outra hora.", // Linha 14
-            "Se for isso que você deseja, entendo. Mas quem sabe no futuro?", // Linha 15
+            "Facil é? certo, por que Fasmo tocava melodias tristes no piano?.", // Linha 14
+            "Isso mesmo!", // Linha 15
 
-            "Oh ok... tudo bem... eu ficarei no aguardo do próximo gênio que por algum motivo resolveu adentrar em uma mansão abandonada.", // Linha 16
+            "O que motivou os jovens a explorar a mansão?", // Linha 16
             "Espero que tenha gostado de ouvir as histórias. Até logo!", // Linha 17
-            "Obrigado por ouvir as lendas, aventureiro. Fique bem!", // Linha 18
+            "Errou!", // Linha 18
             "Se decidir voltar, estarei aqui para compartilhar mais aventuras.", // Linha 19
+
+
+
+
         };
 
         positiveLabels = new string[]
         {
             "Oq você faz aqui?",// Linha 0
             "Puxa, que pena, há alguma forma de você ser liberto?",// Linha 1
-            "É só isso?",// Linha 2
-            "E como isso vai te libertar exatamente?", // Linha 3
+            "Puxa, que pena, há alguma forma de você ser liberto?",// Linha 2
+            "Só isso?", // Linha 3
             "Se você diz...", // Linha 4
-            "Será que sou eu? ou é o Luva de pedreiro?", // Linha 5
-            "Certeza que sou eu, RECEBAAAA!", // Linha 6
-            "Já sei que sou eu mesmo!", // Linha 7
-            "Pode ser eu gosto deles", // Linha 8
-            "Sim eu assiti o GOT", // Linha 9
-            "Quem não deve não teme parça", // Linha 10
-            "Você não termina nenhuma história, chato da peste...", // Linha 11
-            "Assisti uma série da cultura que tinha isso ai de portal", // Linha 12
-            "Aqui tem coragem, MIAUUU", // Linha 13
-            "Você é biruleibe? não foi isso que falei", // Linha 14
+            "Certo, qual a história?", // Linha 5
+            "Certo, e depois?", // Linha 6
+            "Certo", // Linha 7
+            "Ok...", // Linha 8
+            "Hum...", // Linha 9
+            "Certo!", // Linha 10
+            "Cero,Manda ver!", // Linha 11
+            "Ele gostava de tocar piano, porém ele sempre fez isso sozinho ", // Linha 12
+            "Essa foi facil!", // Linha 13
+            "Pois ele vivia sozinho", // Linha 14
             "Vai tarde", // Linha 15
-            "Parece que falei com um doido!", // Linha 16
+            "Até mais!", // Linha 16
             "Que nada, só fazer um pix de R$100", // Linha 17
             "Até breve biruta", // Linha 17
+            
+        };
+
+        negativeLabels = new string[] {
+
+            "Oq você faz aqui?",// Linha 0
+            "Puxa, que pena, há alguma forma de você ser liberto?",// Linha 1
+            "Puxa, que pena, há alguma forma de você ser liberto?",// Linha 2
+            "Só isso?", // Linha 3
+            "Se você diz...", // Linha 4
+            "Certo, qual a história?", // Linha 5
+            "Certo, e depois?", // Linha 6
+            "Certo", // Linha 7
+            "Ok...", // Linha 8
+            "Hum...", // Linha 9
+            "Certo!", // Linha 10
+            "Cero,Manda ver!", // Linha 11
+            "Ele gostava de tocar piano, porém ele sempre fez isso sozinho ", // Linha 12
+            "Essa foi facil!", // Linha 13
+            "Pois ele vivia sozinho", // Linha 14
+            "Vai tarde", // Linha 15
+            "Até mais!", // Linha 16
+            "Que nada, só fazer um pix de R$100", // Linha 17
+            "Até breve biruta", // Linha 17
+
         };
 
         // Exibe a primeira linha do diálogo
@@ -117,7 +146,10 @@ public class DialogueSystem : MonoBehaviour
                 dialogueOptions[0].SetActive(true); // "Sim, me conte mais!"
                 dialogueOptions[1].SetActive(true); // "Não, prefiro ir embora."
                 break;
-           case 7: // Quando o jogador pergunta sobre os dragões
+           case 12: // Primeira decisão antes das perguntas
+                dialogueOptions[0].SetActive(true); // "Sim, me conte mais!"
+                dialogueOptions[1].SetActive(true); // "Não, prefiro ir embora."
+                break;
             case 14: // Quando o jogador pergunta sobre os portais
                 dialogueOptions[0].SetActive(true); // "Sim, me conte mais!"
                 dialogueOptions[1].SetActive(true); // "Não, prefiro ir embora."
@@ -156,15 +188,15 @@ public class DialogueSystem : MonoBehaviour
     {
         switch (currentLine)
         {
-            case 0: // Primeira linha: "Sim, me conte mais!"
+            case 0: // Introdução
             case 1: // Opção inicial de saber mais
                 int indexImageFeliz = 4;
                 ChangeSprite(indexImageFeliz);
                 currentLine = 2; // Avança para o Reino dos Dragões
                 break;
 
-            case 7: // Quando o jogador escolhe saber mais sobre dragões
-                currentLine = 8; // Fala mais sobre os dragões
+            case 11: // Quando o jogador escolhe saber mais sobre dragões
+                currentLine = 12; // Fala mais sobre os dragões
                 break;
 
             case 14: // Quando o jogador escolhe saber mais sobre os portais
@@ -182,9 +214,32 @@ public class DialogueSystem : MonoBehaviour
     // Lógica quando o jogador escolhe "Não, prefiro ir embora."
     void HandleNoOption()
     {
+        switch (currentLine)
+        {
+            case 0: // Introdução
+            case 12: // Opção inicial de saber mais
+                int indexImage = 0;
+                ChangeSprite(indexImage);
+                currentLine = 18; //texto de erro 
+                break;
+
+            case 18: // Quando o jogador escolhe saber mais sobre dragões
+                currentLine = 12; // Fala mais sobre os dragões
+                break;
+
+            case 14: // Quando o jogador escolhe saber mais sobre os portais
+                currentLine = 13; // Fala mais sobre os portais
+                break;
+
+            default: // Para todas as outras opções
+                currentLine += 1; // Apenas avança para a próxima linha
+                int indexImagePadrao = 3;
+                ChangeSprite(indexImagePadrao);
+                break;
+        }
         int indexImageBravo = 0;
         ChangeSprite(indexImageBravo);
-        currentLine = 16; // Finaliza o diálogo e diz adeus
+       
     }
 
     void setNewTextButton(int indexDialogOption, int currentLine)
@@ -203,7 +258,7 @@ public class DialogueSystem : MonoBehaviour
     }
     public void ChangeSprite(int indexImage)
     {
-        Debug.Log("Change Sprite");
+        //Debug.Log("Change Sprite");
         ghost.texture = bgGhost[indexImage];
     }
 }
