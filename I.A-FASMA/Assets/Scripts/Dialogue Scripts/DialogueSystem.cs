@@ -63,6 +63,10 @@ public class DialogueSystem : MonoBehaviour
             "Havia algo especial ou mágico no piano de Fasmo?",//29 perunta 9
             "Você acha que a  história de Fasmo inspirou os jovens de alguma maneira?",//linha 30 perunta 10
             "Fasmo tinha alguma ligação com a construção ou o passado da mansão?",//linha 31 pergunta 11
+
+
+            //"Você errou logo no inicio, sério? olha caia fora daqui por favor ", //linha 32 para erro inicio
+            //"Esta errado, porém vou te dar mais uma chance, quer recomeçar as perguntas?",//linha 33 erro meio
             
 
 
@@ -111,7 +115,7 @@ public class DialogueSystem : MonoBehaviour
             "Com certeza, principalmente a nunca abandonar os amigos, vai que ele é um excelente pianista!",//linha 30
             "Sim, a mansão era dele pelo que deu a entender",//linha 31
             
-
+            
 
 
 
@@ -144,6 +148,7 @@ public class DialogueSystem : MonoBehaviour
 
         // Exibe a primeira linha do diálogo
         ShowDialogueLine();
+        UpdateScoreText();
     }
 
     // Exibe uma linha de diálogo
@@ -240,8 +245,9 @@ public class DialogueSystem : MonoBehaviour
     {
         switch (optionIndex)
         {
-            case 0: // "Sim, me conte mais!"
+            case 0: 
                 HandleYesOption();
+                UpdateScoreText();
                 break;
 
             case 1: // "Não, prefiro ir embora."
@@ -250,6 +256,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         ShowDialogueLine(); // Atualiza a linha do diálogo
+        UpdateScoreText();
     }
 
     // Lógica quando o jogador escolhe "Sim, me conte mais!"
@@ -337,36 +344,45 @@ public class DialogueSystem : MonoBehaviour
 
 
             case 13: // P1
-                currentLine = 14;
+                currentLine = 32;
                 UpdateScoreText();
-                AddPoints(10);
-               
+                SubtractPoints(10);
+                EndDialogue();
+                DisabledAllOptions();
+
                 break;
 
             case 15: //P2
-                currentLine = 16;
+                currentLine = 32;
                 SubtractPoints(10);
+                EndDialogue();
+                DisabledAllOptions();
                 break;
 
             case 17: // P3
-                currentLine = 18;
+                currentLine = 32;
                 SubtractPoints(10);
+                EndDialogue();
+                DisabledAllOptions();
                 break;
             case 19: // P4
-                currentLine = 20; // Fala mais sobre os portais
+                currentLine = 32; // Fala mais sobre os portais
+                EndDialogue();
+                DisabledAllOptions();
                 SubtractPoints(10);
+               
                 break;
             case 20: // P5
-                currentLine = 21; // Fala mais sobre os portais
+                currentLine = 33; // Fala mais sobre os portais
                 SubtractPoints(10);
 
                 break;
             case 21: // P5
-                currentLine = 22; // Fala mais sobre os portais
+                currentLine = 33; // Fala mais sobre os portais
                 SubtractPoints(10);
                 break;
             case 23: // P6
-                currentLine = 24; // Fala mais sobre os portais
+                currentLine = 33; // Fala mais sobre os portais
                 SubtractPoints(10);
                 break;
             case 25: // P8
@@ -374,16 +390,16 @@ public class DialogueSystem : MonoBehaviour
                 SubtractPoints(10);
                 break;
             case 29: // P9
-                currentLine = 30; // Fala mais sobre os portais
+                currentLine = 34; // Fala mais sobre os portais
                 SubtractPoints(10);
                 break;
 
             case 30: // P10
-                currentLine = 31; // Fala mais sobre os portais
+                currentLine = 34; // Fala mais sobre os portais
               SubtractPoints(10);
                 break;
             case 31: // P11
-                currentLine = 32; // Fala mais sobre os portais
+                currentLine = 34; // Fala mais sobre os portais
                 SubtractPoints(10);
                 break; 
         }
